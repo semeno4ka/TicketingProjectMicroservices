@@ -16,10 +16,6 @@
     <dependencies>
         <dependency>
             <groupId>com.cydeo</groupId>
-            <artifactId>app-config-data</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.cydeo</groupId>
             <artifactId>app-domain-model</artifactId>
         </dependency>
 

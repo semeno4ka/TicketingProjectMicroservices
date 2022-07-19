@@ -20,10 +20,6 @@
             <groupId>com.cydeo</groupId>
             <artifactId>app-client-management</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.cydeo</groupId>
-            <artifactId>app-config-data</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

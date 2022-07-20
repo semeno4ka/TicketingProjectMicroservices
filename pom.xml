@@ -5,6 +5,7 @@
 
     <packaging>pom</packaging>
 
+
     <modules>
         <module>app-domain-model</module>
         <module>user-service</module>

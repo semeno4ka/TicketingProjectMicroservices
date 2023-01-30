@@ -3,11 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<!--Create parent pom by specifying it with below tag to skip creating jar from it-->
     <packaging>pom</packaging>
-
-
     
-
+<!--Specify modules which will use parent pom-->
     <modules>
         <module>app-domain-model</module>
         <module>user-service</module>
@@ -19,8 +18,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.7.5</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.cydeo</groupId>
@@ -29,15 +28,19 @@
     <name>ticketing-project-microservices</name>
     <description>ticketing-project-microservices</description>
 
+
+<!--Keep track on versions in one place, so that child pom has no need to mention it-->
     <properties>
         <java.version>11</java.version>
-        <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
+        <spring-boot.version>2.7.5</spring-boot.version>
         <modelmapper.version>2.3.9</modelmapper.version>
         <lombok.version>1.18.22</lombok.version>
-        <spring-cloud.version>2.2.6.RELEASE</spring-cloud.version>
+        <spring-cloud.version>3.1.4</spring-cloud.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
 
+
+<!--Manage dependencies in dependency Management. Template for child pom files, no jar for parent-->
     <dependencyManagement>
 
         <dependencies>
@@ -108,7 +111,7 @@
         </dependencies>
     </dependencyManagement>
 
-
+<!--Create images for docket in one place using plugin-->
     <build>
         <plugins>
             <plugin>

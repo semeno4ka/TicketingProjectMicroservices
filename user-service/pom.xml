@@ -2,6 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<!--    Specify the parent -->
     <parent>
         <artifactId>ticketing-project-microservices</artifactId>
         <groupId>com.cydeo</groupId>
@@ -12,7 +14,7 @@
 
     <artifactId>user-service</artifactId>
 
-
+<!--Specify dependencies required for this microservice only, skip version - is  maintained in parent -->
     <dependencies>
 
         <dependency>

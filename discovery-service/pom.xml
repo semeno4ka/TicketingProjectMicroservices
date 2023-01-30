@@ -11,7 +11,7 @@
 
     <artifactId>discovery-service</artifactId>
 
-<!--    Add the Server dependency from parent pom and add exclusions related to health check previously performed by Eureka-->
+<!--    Add the Server dependency from parent pom and add exclusions related to load balancing previously performed by Eureka-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -25,6 +25,7 @@
                     <groupId>com.netflix.ribbon</groupId>
                     <artifactId>ribbon-eureka</artifactId>
                 </exclusion>
+<!--                below exclusion helped to solve an error.Google advice-->
                 <exclusion>
                     <groupId>javax.servlet</groupId>
                     <artifactId>servlet-api</artifactId>
@@ -32,5 +33,28 @@
             </exclusions>
         </dependency>
     </dependencies>
+
+<!--    Create build image plugin-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <name>${project.groupId}/discovery-service:${project.version}</name>
+                    </image>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

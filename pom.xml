@@ -115,6 +115,12 @@
                 <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
                 <version>${spring-cloud.version}</version>
             </dependency>
+<!--             Add actuator to keep track on instance,CPU occupation and health information  -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

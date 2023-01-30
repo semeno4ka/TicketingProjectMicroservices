@@ -25,7 +25,6 @@
                     <groupId>com.netflix.ribbon</groupId>
                     <artifactId>ribbon-eureka</artifactId>
                 </exclusion>
-<!--                below exclusion helped to solve an error.Google advice-->
                 <exclusion>
                     <groupId>javax.servlet</groupId>
                     <artifactId>servlet-api</artifactId>

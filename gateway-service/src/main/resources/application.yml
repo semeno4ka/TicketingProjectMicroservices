@@ -7,7 +7,7 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-# create a list of item you want to define: id, uri, predicate and filters
+# create a list of item you want to define: id, uri, predicate and filters -- Path=/cydeo/dev/user/**
       routes:
             - id: user-service
               uri: lb://user-service
@@ -15,6 +15,7 @@ spring:
                 - Path=/cydeo/dev/user/**
               filters:
                 - RewritePath=/cydeo/dev/user/(?<segment>.*),/$\{segment}
+#segment will be attached to path such as: api/v1/user
             - id: project-service
               uri: lb://project-service
               predicates:

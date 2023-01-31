@@ -1,5 +1,4 @@
 spring:
- # register services you want to see in visual with zipkin
   sleuth:
     sampler:
       probability: 1

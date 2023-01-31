@@ -105,6 +105,7 @@ public class ProjectServiceImpl implements ProjectService {
 //        taskService.completeByProject(projectMapper.convertToDto(project));
     }
 
+    //Implement FallBack logic
     @Override
     public List<ProjectDTO> listAllProjectDetails(String userName) throws ProjectServiceException {
 

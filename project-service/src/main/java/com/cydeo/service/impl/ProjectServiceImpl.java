@@ -140,6 +140,7 @@ public class ProjectServiceImpl implements ProjectService {
         return new ArrayList<>();
     }
 
+
     @Override
     public List<ProjectDTO> readAllByAssignedManager(User user) {
         List<Project> list = projectRepository.findAllByAssignedManager(user);

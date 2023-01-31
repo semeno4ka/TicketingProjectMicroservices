@@ -1,6 +1,4 @@
 package com.cydeo.controller;
-
-
 import com.cydeo.dto.UserDTO;
 import com.cydeo.entity.ResponseWrapper;
 import com.cydeo.exception.UserServiceException;
@@ -15,7 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/user")
 public class UserController {
-
     private final UserService userService;
 
     public UserController(UserService userService) {
@@ -55,4 +52,3 @@ public class UserController {
         //204 - HttpStatus.NO_CONTENT
     }
 }
-

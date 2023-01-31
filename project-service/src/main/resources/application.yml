@@ -75,6 +75,7 @@ resilience4j:
     instances:
       user-service:
         baseConfig: default
+#ratelimiter defines the load of one API to accept
   ratelimiter:
     instances:
       test:

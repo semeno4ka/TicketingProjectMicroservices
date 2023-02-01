@@ -2,13 +2,17 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native
+    active: git
 #   native - read from my file system
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config
+        git:
+          uri: https://github.com/semeno4ka/ticketing-project-microservices-config
+          default-label: master
+          username: semeno4ka
+          password: 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
+      fail-fast: true
 
 server:
   port: 8888

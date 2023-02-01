@@ -1,0 +1,14 @@
+#loaded before app.properties and app yml files and all services will have access to Git configs
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: user_service
+  cloud:
+    config:
+      name: config-client
+      uri: http://configserver:8888
+      fail-fast: true
+      retry:
+        max-attempts: 200
+        max-interval: 10000

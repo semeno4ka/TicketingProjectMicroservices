@@ -10,7 +10,7 @@ spring:
         git:
           uri: https://github.com/semeno4ka/ticketing-project-microservices-config
           default-label: main
-#          could be master, depens on the branch name in Git
+#          could be master, depends on the branch name in Git
           username: semeno4ka
 #          git doesn't accept regular password, a token must be created
           password: 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

@@ -11,7 +11,8 @@ spring:
           uri: https://github.com/semeno4ka/ticketing-project-microservices-config
           default-label: master
           username: semeno4ka
-          password: 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
+#          git doesn't accept regular password, a token must be created
+          password: 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
       fail-fast: true
 
 server:

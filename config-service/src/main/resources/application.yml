@@ -13,7 +13,8 @@ spring:
 #          could be master, depends on the branch name in Git
           username: semeno4ka
 #          git doesn't accept regular password, a token must be created
-          password: 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
+          password: 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
+#            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
       fail-fast: true
 
 server:

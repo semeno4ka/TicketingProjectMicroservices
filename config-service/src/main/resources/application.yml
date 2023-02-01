@@ -13,8 +13,12 @@ spring:
 #          could be master, depends on the branch name in Git
           username: semeno4ka
 #          git doesn't accept regular password, a token must be created
-          password: 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
+          password: '{cipher}de78c71682e76b0aaf56804ca8f75dbaa9ec5b79121252682d8cd9c1b80bec60c4b4729b23232a13614fc3398363e7c9952d98fc3ce08decbfd274fab377d144'
+#          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
       fail-fast: true
+encrypt:
+  key: cydeo
+#  if not public, should change application.yml to boostrap.yml
 
 server:
   port: 8888
